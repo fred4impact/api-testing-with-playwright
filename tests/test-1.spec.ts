@@ -1,0 +1,31 @@
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('https://ecommerce-playground.lambdatest.io/');
+  await page.getByRole('button', { name: ' My account' }).click();
+  await page.getByRole('link', { name: ' Register' }).click();
+  await page.getByRole('textbox', { name: 'First Name*' }).click();
+  await page.getByRole('textbox', { name: 'First Name*' }).press('CapsLock');
+  await page.getByRole('textbox', { name: 'First Name*' }).fill('');
+  await page.getByRole('textbox', { name: 'First Name*' }).press('CapsLock');
+  await page.getByRole('textbox', { name: 'First Name*' }).fill('');
+  await page.getByRole('textbox', { name: 'First Name*' }).press('CapsLock');
+  await page.getByRole('textbox', { name: 'First Name*' }).fill('Fred');
+  await page.getByRole('textbox', { name: 'Last Name*' }).click();
+  await page.getByRole('textbox', { name: 'Last Name*' }).press('CapsLock');
+  await page.getByRole('textbox', { name: 'Last Name*' }).fill('');
+  await page.getByRole('textbox', { name: 'Last Name*' }).press('CapsLock');
+  await page.getByRole('textbox', { name: 'Last Name*' }).fill('Test');
+  await page.getByRole('textbox', { name: 'E-Mail*' }).click();
+  await page.getByRole('textbox', { name: 'E-Mail*' }).fill('test@gmail.com');
+  await page.getByRole('textbox', { name: 'Telephone*' }).click();
+  await page.getByRole('textbox', { name: 'Telephone*' }).fill('07767');
+  await page.getByRole('textbox', { name: 'Password*' }).click();
+  await page.getByRole('textbox', { name: 'Password*' }).press('CapsLock');
+  await page.getByRole('textbox', { name: 'Password*' }).fill('Testing123');
+  await page.getByRole('textbox', { name: 'Password Confirm*' }).click();
+  await page.getByRole('textbox', { name: 'Password Confirm*' }).press('CapsLock');
+  await page.getByRole('textbox', { name: 'Password Confirm*' }).fill('Testing123');
+  await page.getByText('I have read and agree to the').click();
+  await page.getByRole('button', { name: 'Continue' }).click();
+});
