@@ -12,3 +12,28 @@ npm init -y and npm init playwright@latest
 - Step 9:  Create const of each page and use it to call the methods of each page 
 
 # api-testing-with-playwright
+
+# Open the Project in VS Code
+ - git clone repo into your directory 
+
+- Open VS Code.
+- Click File → Open Folder…
+- Select the folder where you cloned the repo.
+
+  2. Install Node.js Dependencies
+  ```bash
+  npx playwright install
+  npx playwright install
+  # Inspect the package.json Scripts
+
+  # Run the Tests
+  npm test OR
+  npx playwright test
+
+ # (Optional) Run Specific Test Files
+ npx playwright test tests/<filename>.spec.js
+
+ # View HTML Test report 
+ npx playwright show-report
+
+
